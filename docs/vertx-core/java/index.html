@@ -1129,12 +1129,12 @@ cleanup that takes some time.</p>
     // Do something
   }
 
-  public void stop(Future&lt;Void&gt; startFuture) {
+  public void stop(Future&lt;Void&gt; stopFuture) {
     obj.doSomethingThatTakesTime(res -&gt; {
       if (res.succeeded()) {
-        startFuture.complete();
+        stopFuture.complete();
       } else {
-        startFuture.fail();
+        stopFuture.fail();
       }
     });
   }
