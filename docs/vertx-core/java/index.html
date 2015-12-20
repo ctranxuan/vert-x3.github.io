@@ -69,7 +69,7 @@
       <div class="row">
         <div class="col-sm-12">
           <h1>Vert.x Core Manual</h1>
-          
+
         </div>
       </div>
     </div>
@@ -2619,13 +2619,8 @@ server.listen(0, "localhost", res -&gt; {
 </div>
 <div class="sect2">
 <h3 id="_getting_notified_of_incoming_connections">Getting notified of incoming connections</h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">To be notified when a connection is made you need to set a `link:../../apidocs/io/vertx/core/net/NetServer.html#connectHandler-(@io.vertx.codegen.annotations.Nullable </dt>
-<dd>
-<p>io.vertx.core.Handler)-[connectHandler]`:</p>
-</dd>
-</dl>
+<div class="paragraph">
+<p>To be notified when a connection is made you need to set a <code><a href="../../apidocs/io/vertx/core/net/NetServer.html#connectHandler-io.vertx.core.Handler-">connectHandler</a></code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2687,14 +2682,9 @@ socket.write("some data", "UTF-16");</code></pre>
 </div>
 <div class="sect2">
 <h3 id="_closed_handler">Closed handler</h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">If you want to be notified when a socket is closed, you can set a `link:../../apidocs/io/vertx/core/net/NetSocket.html#closeHandler-(@io.vertx.codegen.annotations.Nullable </dt>
-<dd>
-<p>io.vertx.core.Handler)-[closeHandler]`
+<div class="paragraph">
+<p>If you want to be notified when a socket is closed, you can set a <code><a href="../../apidocs/io/vertx/core/net/NetSocket.html#closeHandler-io.vertx.core.Handler-">closeHandler</a></code>
 on it:</p>
-</dd>
-</dl>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3552,11 +3542,8 @@ server.listen(8080, "myhost.com", res -&gt; {
 <h3 id="_getting_notified_of_incoming_requests">Getting notified of incoming requests</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">To be notified when a request arrives you need to set a `link:../../apidocs/io/vertx/core/http/HttpServer.html#requestHandler-(@io.vertx.codegen.annotations.Nullable </dt>
-<dd>
-<p>io.vertx.core.Handler)-[requestHandler]`:</p>
-</dd>
-</dl>
+<div class="paragraph">
+<p>To be notified when a request arrives you need to set a <code><a href="../../apidocs/io/vertx/core/http/HttpServer.html#requestHandler-io.vertx.core.Handler-">requestHandler</a></code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3787,12 +3774,9 @@ request.endHandler(v -&gt; {
 });</code></pre>
 </div>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">This is such a common case, that Vert.x provides a `link:../../apidocs/io/vertx/core/http/HttpServerRequest.html#bodyHandler-(@io.vertx.codegen.annotations.Nullable </dt>
-<dd>
-<p>io.vertx.core.Handler)-[bodyHandler]` to do this
-for you. The body handler is called once when all the body has been received:</p>
+<div class="paragraph">
+<p>This is such a common case, that Vert.x provides a <code><a href="../../apidocs/io/vertx/core/http/HttpServerRequest.html#bodyHandler-io.vertx.core.Handler-">bodyHandler</a></code>
+ to do this for you. The body handler is called once when all the body has been received:</p>
 </dd>
 </dl>
 </div>
@@ -4811,21 +4795,16 @@ it is ok to send the rest of the body.</p>
 Sending large amounts of data if the request might not be accepted is a waste of bandwidth and ties up the server
 in reading data that it will just discard.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Vert.x allows you to set a `link:../../apidocs/io/vertx/core/http/HttpClientRequest.html#continueHandler-(@io.vertx.codegen.annotations.Nullable </dt>
-<dd>
-<p>io.vertx.core.Handler)-[continueHandler]` on the
-client request object</p>
-</dd>
-</dl>
+<div class="paragraph">
+<p>Vert.x allows you to set a <code><a href="../../apidocs/io/vertx/core/http/HttpClientRequest.html#continueHandler-io.vertx.core.Handler-">continueHandler</a></code> on the
+client request object.</p>
 </div>
 <div class="paragraph">
 <p>This will be called if the server sends back a <code>Status: 100 (Continue)</code> response to signify that it is ok to send
 the rest of the request.</p>
 </div>
 <div class="paragraph">
-<p>This is used in conjunction with `<a href="../../apidocs/io/vertx/core/http/HttpClientRequest.html#sendHead--">sendHead</a>`to send the head of the request.</p>
+<p>This is used in conjunction with <code><a href="../../apidocs/io/vertx/core/http/HttpClientRequest.html#sendHead--">sendHead</a></code> to send the head of the request.</p>
 </div>
 <div class="paragraph">
 <p>Here&#8217;s an example:</p>
@@ -5034,14 +5013,9 @@ connection between HTTP servers and HTTP clients (typically browsers).</p>
 </div>
 <div class="sect4">
 <h5 id="_websocket_handler">WebSocket handler</h5>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">The first way involves providing a `link:../../apidocs/io/vertx/core/http/HttpServer.html#websocketHandler-(@io.vertx.codegen.annotations.Nullable </dt>
-<dd>
-<p>io.vertx.core.Handler)-[websocketHandler]`
-on the server instance.</p>
-</dd>
-</dl>
+<div class="paragraph">
+<p>The first way involves providing a <code><a href="../../apidocs/io/vertx/core/http/HttpServer.html#websocketHandler-io.vertx.core.Handler-">websocketHandler</a></code>
+ on the server instance.</p>
 </div>
 <div class="paragraph">
 <p>When a WebSocket connection is made to the server, the handler will be called, passing in an instance of
@@ -6649,15 +6623,10 @@ server.connectHandler(sock -&gt; {
 }).listen();</code></pre>
 </div>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">And there we have it. The `link:../../apidocs/io/vertx/core/streams/WriteStream.html#drainHandler-(@io.vertx.codegen.annotations.Nullable </dt>
-<dd>
-<p>io.vertx.core.Handler)-[drainHandler]` event handler will
-get called when the write queue is ready to accept more data, this resumes the <code>NetSocket</code> that
+<div class="paragraph">
+<p>And there we have it. The <code><a href="../../apidocs/io/vertx/core/streams/WriteStream.html#drainHandler-io.vertx.core.Handler-">drainHandler</a></code>
+ event handler will get called when the write queue is ready to accept more data, this resumes the <code>NetSocket</code> that
 allows more data to be read.</p>
-</dd>
-</dl>
 </div>
 <div class="paragraph">
 <p>Wanting to do this is quite common while writing Vert.x applications, so we provide a helper class
@@ -8302,18 +8271,18 @@ and <code><a href="../../apidocs/io/vertx/core/impl/launcher/VertxCommandLaunche
 </div>
 </div>
 
-        
 
-        
+
+
           <div id="footer">
             <div id="footer-text">
-              
+
                 Last updated 2015-12-15 08:14:02 CET
-              
-              
+
+
             </div>
           </div>
-        
+
       </div>
     </div>
   </div>
